@@ -56,9 +56,11 @@ function ProductsPage() {
                             >
                                 <div>
                                     <Image
-                                        className="object-center p-5 h-[278px] bg-gray-200 rounded-lg"
+                                        className="object-center p-5 h-[278px] w-full bg-gray-200 rounded-lg"
                                         src={product.image}
                                         alt={product.name}
+                                        height={278}
+                                        width={"100"}
                                     />
                                     <h3 className="text-[16px] mt-4 mb-4">
                                         {product.name}

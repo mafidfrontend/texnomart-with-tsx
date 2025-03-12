@@ -26,3 +26,25 @@ export type Mahsulotpage = {
     sale_price: number;
     large_images: string;
 };
+
+export type CatalogModal = {
+    brands: [];
+    childs: [
+        {
+            childs: [
+                {
+                    name: string;
+                    show_childs_in_web_mobile: boolean;
+                    slug: string;
+                }
+            ];
+            name: string;
+            show_childs_in_web_mobile: boolean;
+            slug: string;
+        }
+    ];
+    icon: string;
+    name: string;
+    show_childs_in_web_mobile: boolean;
+    slug: string;
+};
