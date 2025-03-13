@@ -2,6 +2,7 @@
 import Loading from "@/components/Loading";
 import { CategoryPageType } from "@/types";
 import axios from "axios";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 export default function Categorys() {
     const [loading, setLoading] = useState(false);
@@ -22,9 +23,11 @@ export default function Categorys() {
     return (
         <div className="flex items-center p-4 justify-between container mx-auto">
             {productTitle.map((item, index) => (
-                <div key={index}>
-                    <p>{item.title}</p>
-                </div>
+                <ul key={index} className="">
+                    <Link href={"/catalog/" + item.slug}>
+                        <li className="text-xl">{item.title}</li>
+                    </Link>
+                </ul>
             ))}
         </div>
     );

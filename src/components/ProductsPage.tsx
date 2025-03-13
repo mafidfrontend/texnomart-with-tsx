@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import Loading from "./Loading";
 import Link from "next/link";
 import Image from "next/image";
+import Product from "./Product";
 
 function ProductsPage() {
     const [products, setProducts] = useState<ProdcutsPageType[]>([]);
@@ -48,41 +49,7 @@ function ProductsPage() {
             </div>
             <div className="grid grid-cols-4 w-full container pt-20">
                 {products.slice(0, 4).map((product, i) => (
-                    <Link href={"/product/" + product.id} key={i}>
-                        <div className="rounded-[20px] w-[284px] h-[456px] box flex flex-col justify-between">
-                            <div
-                                key={i}
-                                className="rounded-[20px]  w-[284px] h-[456px] flex flex-col justify-between"
-                            >
-                                <div>
-                                    <Image
-                                        className="object-center p-5 h-[278px] w-full bg-gray-200 rounded-lg"
-                                        src={product.image}
-                                        alt={product.name}
-                                        height={278}
-                                        width={"100"}
-                                    />
-                                    <h3 className="text-[16px] mt-4 mb-4">
-                                        {product.name}
-                                    </h3>
-                                </div>
-                                <div>
-                                    <span className="bg-[#f4f4f4] p-1 rounded-2xl text-[13px]">
-                                        {product.axiom_monthly_price}
-                                    </span>
-                                    <div className="flex justify-between items-center mt-1">
-                                        <p>
-                                            {product.sale_price}{" "}
-                                            <span>so&apos;m</span>
-                                        </p>
-                                        <Button
-                                            icon={<ShoppingCartOutlined />}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </Link>
+                    <Product product={product} index={i} />
                 ))}
             </div>
         </div>

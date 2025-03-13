@@ -44,7 +44,6 @@ function Catalog({ isOpen }: { isOpen: boolean }) {
                         </div>
                         <div>
                             <h2>{item.name}</h2>
-                            
                         </div>
                     </div>
                 );
