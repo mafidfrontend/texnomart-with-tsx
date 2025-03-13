@@ -19,7 +19,6 @@ export default function Navbar() {
             <nav>
                 <div className="container py-5">
                     <div className="flex items-center">
-                        
                         <Link href={"/"}>
                             <Image
                                 width={230}

@@ -47,7 +47,7 @@ function ProductsPage() {
             </div>
             <div className="grid grid-cols-4 w-full container pt-20">
                 {products.slice(0, 4).map((product, i) => (
-                    <Product product={product} index={i} />
+                    <Product key={i} product={product} index={i} />
                 ))}
             </div>
         </div>
